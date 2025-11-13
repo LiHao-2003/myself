@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李浩 - 个人学术主页</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">李浩</div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#experience">在校经历</a></li>
+                <li><a href="#knowledge-graph" class="highlight">超声知识图谱</a></li>
+                <li><a href="#honor">荣誉</a></li>
+                <li><a href="#contact">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首页 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>李浩</h1>
+            <p>天津医科大学影像诊断学本科生</p>
+            <p>专注于超声成像技术与医学影像研究</p>
+            <a href="#about" class="btn">了解更多</a>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于我</h2>
+            </div>
+            <div class="about-content">
+                <div class="profile-img-container">
+                    <img src="https://raw.githubusercontent.com/LiHao-2003/picture-storage/3364617607a41b17b25628633852b5c6d32d8fd6/%E6%9D%8E%E6%B5%A9%E7%9A%84%E7%85%A7%E7%89%87.jpg" alt="李浩" class="profile-img">
+                </div>
+                <div class="about-text">
+                    <h3>个人简介</h3>
+                    <p>本人是一名充满活力且注重效率的从业者，热爱运动，从中磨练出坚韧的毅力与团队协作精神。在工作中，我以认真严谨的态度著称，始终追求高质高效的任务完成。我具备扎实的编程能力，并乐于钻研技术难点，享受通过深入思考与代码实践解决复杂问题的过程。同时，我拥有良好的团队精神与沟通能力，能够清晰地阐述观点并积极倾听团队意见，致力于在协作中共同推进项目，创造卓越价值。</p>
+                    
+                    <ul class="info-list">
+                        <li><i class="fas fa-user"></i> <strong>姓名：</strong>李浩</li>
+                        <li><i class="fas fa-birthday-cake"></i> <strong>出生年月：</strong>2003年10月</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>籍贯：</strong>天津静海</li>
+                        <li><i class="fas fa-graduation-cap"></i> <strong>学术身份：</strong>天津医科大学影像诊断学本科生</li>
+                        <li><i class="fas fa-envelope"></i> <strong>学术邮箱：</strong>lihao2022082110@163.com</li>
+                        <li><i class="fas fa-phone"></i> <strong>手机号：</strong>15620401990</li>
+                    </ul>
+                    
+                    <h3>教育背景</h3>
+                    <p>2022.08-至今 天津医科大学/本科 医学影像学</p>
+                    <p><strong>主修课程：</strong>生理学、系统解剖学、局部解剖学、病理学、诊断学、生物化学与分子生物学、影像解剖学、内科学、外科学、妇产科学、儿科学等。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 在校经历 -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>在校经历</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2022.08-2023.06</h3>
+                        <h4>青年服务中心社员</h4>
+                        <p>加入了青年服务中心，策划、组织、参加了许多有趣的活动。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2022.08-2023.05</h3>
+                        <h4>习研会成员</h4>
+                        <p>习研会是校本部的一个社团组织，经常开展一些大型活动可供成员参加。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 超声知识图谱 -->
+    <section id="knowledge-graph">
+        <div class="container">
+            <div class="section-title">
+                <h2>超声知识图谱</h2>
+            </div>
+            <div class="knowledge-graph">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索超声术语...">
+                </div>
+                <div class="graph-controls">
+                    <button id="reset-view">重置视图</button>
+                    <button id="expand-all">展开所有</button>
+                    <button id="collapse-all">折叠所有</button>
+                </div>
+                <div id="graph-container"></div>
+                <div class="node-info" id="node-info"></div>
+            </div>
+            <div class="graph-description">
+                <h3>超声医学影像知识图谱说明</h3>
+                <p>本图谱展示了超声成像技术的核心概念、应用领域和技术术语。您可以通过以下方式与图谱交互：</p>
+                <ul>
+                    <li><strong>点击节点</strong> - 展开或折叠子节点</li>
+                    <li><strong>鼠标悬停</strong> - 查看节点详细信息</li>
+                    <li><strong>拖拽节点</strong> - 重新布局图谱</li>
+                    <li><strong>使用搜索框</strong> - 查找特定术语并高亮相关节点</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 荣誉 -->
+    <section id="honor">
+        <div class="container">
+            <div class="section-title">
+                <h2>荣誉与证书</h2>
+            </div>
+            <div class="honors-grid">
+                <div class="card honor-card">
+                    <div class="honor-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>校级奖学金</h3>
+                    <p>2022-2023年度校级奖学金</p>
+                </div>
+                <div class="card honor-card">
+                    <div class="honor-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>CET-4证书</h3>
+                    <p>大学英语四级证书</p>
+                </div>
+                <div class="card honor-card">
+                    <div class="honor-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>驾驶证（C1）</h3>
+                    <p>小型汽车驾驶证</p>
+                </div>
+                <div class="card honor-card">
+                    <div class="honor-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>优秀团员</h3>
+                    <p>优秀共青团员荣誉称号</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系方式</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>学术邮箱</h3>
+                            <p>lihao2022082110@163.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>手机号</h3>
+                            <p>15620401990</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>学校</h3>
+                            <p>天津医科大学</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" placeholder="请输入您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" placeholder="请输入您的邮箱">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言</label>
+                        <textarea id="message" placeholder="请输入您的留言"></textarea>
+                    </div>
+                    <button class="btn">发送消息</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">李浩</div>
+                <p>天津医科大学影像诊断学本科生</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                </div>
+                <p>&copy; 2025 李浩. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- 引入D3.js库 -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- 引入自定义JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
